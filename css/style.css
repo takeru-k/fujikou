@@ -811,6 +811,14 @@ li {
   padding: 40px 0;
 }
 
+.c-section__xl {
+  padding: 40px 0;
+}
+
+.c-section + .c-section {
+  padding-top: 0;
+}
+
 .c-section__heading {
   text-align: center;
 }
@@ -2731,7 +2739,7 @@ div.wpcf7 .wpcf7-spinner {
 
 .p-csr__action {
   background: #F5F5F5;
-  padding: 8px;
+  padding: 16px;
   border-radius: 10px;
   margin-top: 16px;
 }
