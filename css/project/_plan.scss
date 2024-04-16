@@ -1,0 +1,69 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-plan__item{
+  border: 1px solid #dadada;
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.p-plan__item-title{
+  font-size: 18px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.p-plan__item-text{
+  margin-top: 8px;
+  @include mixin.p-size;
+}
+
+.p-plan__item-list{
+  margin-top: 8px;
+
+  li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    margin-left: 4px;
+    @include mixin.p-size;
+
+          &:before {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: url(../images/common/check.png) no-repeat center
+          center/contain;
+                left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  }
+}
+
+@media (min-width: 768px){
+  .p-plan{
+            display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    margin-top: 40px;
+  }
+
+  .p-plan__item{
+    padding: 24px;
+  }
+
+  .p-plan__item-title{
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .p-plan__item-list{
+    margin-top: 20px;
+
+    li{
+      padding-left: 28px;
+    }
+  }
+}

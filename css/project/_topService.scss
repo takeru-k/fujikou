@@ -1,0 +1,170 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-topService{
+  padding: 40px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: 
+    linear-gradient(#fff 0%, #F4FBFE 50%, #fff 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: -1;
+  }
+}
+
+
+
+.p-topService__heading{
+
+  span{
+    @include mixin.top-heading-span;
+    
+    &::before {
+      @include mixin.span-line;
+    }
+  }
+
+  h2{
+    @include mixin.top-heading-h2;
+  }
+}
+
+.p-topService__texts{
+  margin-top: 16px;
+
+  p{
+    margin-top: 8px;
+    @include mixin.p-size;
+  }
+}
+
+.p-topService__item{
+  margin-top: 40px;
+  position: relative;
+}
+
+
+.p-topService__contents{
+  padding: 16px 8px;
+  z-index: 2;
+
+  span{
+    color: setting.$color-main;
+    font-family: setting.$font-english;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+
+  h3{
+    font-size: 18px;
+  }
+
+  p{
+    margin-top: 8px;
+    @include mixin.p-size;
+  }
+}
+
+.p-topService__img{
+
+  img{
+    aspect-ratio: 3 / 2;
+    border-radius: 10px;
+  }
+}
+
+.p-topService__link{
+  margin-top: 16px;
+
+  a{
+    position: relative;
+    padding-right: 52px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.8s ease;
+    text-align: right;
+    display: block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 48%;
+      right: 0;
+      transform: translateY(-52%);
+      background: url('../images/top/top-arrow-white.png') no-repeat center center/contain;
+      height: 40px;
+      width: 40px;
+      transition: 0.4s;
+    }
+
+    &:hover{
+      opacity: .6;
+      text-decoration: underline;
+    }
+
+      &:hover:before{
+      height: 48px;
+      width: 48px;
+      right: -10px;
+    }  
+  }
+}
+
+@media (min-width: 768px){
+  .p-topService__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .p-topService__item{
+    width: 48%;
+  }
+
+  .p-topService__img{
+    margin: auto;
+  }
+
+
+}
+
+@media (min-width: 1024px){
+  .p-topService{
+    padding: 0 0 88px;
+  }
+
+  .p-topService__item{
+    width: 31%;
+  }
+
+  .p-topService__contents{
+    padding: 16px;
+
+    h3{
+      font-size: 24px;
+    }
+
+    p{
+      margin-top: 20px;
+    }
+  }
+
+  .p-topService__link{
+    margin-top: 24px;
+   
+    a{
+      font-size: 16px;
+       text-align: right;
+       display: block;
+    }
+  }
+
+}

@@ -1,0 +1,67 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-flow__contents{
+  margin-top: 16px;
+  counter-reset: number 0;
+}
+
+.p-flow__item{
+  margin-bottom: 24px;
+  h3{
+    padding-left: 48px;
+    position: relative;
+    margin-bottom: 16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      counter-increment: number 1; 
+      content: counter(number) ;
+      font-size: 18px;
+      color: #fff;
+      background: setting.$color-main;
+     width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+        top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+    }
+  }
+
+  a{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+}
+
+@media (min-width: 768px){
+  .p-flow{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 20px;
+  }
+
+  .p-flow__contents{
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-flow__item{
+    margin-bottom: 40px;
+    
+    h3{
+      font-size: 22px;
+    }
+    p{
+      font-size: 18px;
+      padding-left: 48px;
+    }
+  }
+}

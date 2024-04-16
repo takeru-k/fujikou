@@ -1,0 +1,59 @@
+@use "../setting/setting";
+
+.p-thanks{
+  padding: 40px 0;
+  max-width: 720px;
+  margin:0 auto;
+}
+
+.p-thanks__heading{
+  font-size: 24px;
+}
+
+.p-thanks__texts{
+  margin-top: 20px;
+
+  p{
+    margin-bottom: 16px;
+  }
+
+  @media not all and (min-width: 767px){
+    br{
+      display: none;
+    }
+  }
+}
+
+.p-thanks__alert{
+  p{
+    color: #cb0808;
+    margin-bottom: 16px;
+  }
+}
+
+
+@media (min-width: 768px){
+  .p-thanks__heading{
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1024px){
+  .p-thanks{
+    padding: 64px 0;
+  }
+
+  .p-thanks__heading{
+    font-size: 32px;
+  }
+
+  .p-thanks__texts{
+    margin-top: 28px;
+    font-size: 18px;
+  }
+
+  .p-thanks__alert{
+    font-size: 18px;
+  }
+}

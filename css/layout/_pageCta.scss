@@ -1,0 +1,134 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.l-pageCta{
+  background: #23BBCC;
+  color: #fff;
+  padding: 24px 0;
+}
+
+.l-pageCta__header{
+  text-align: center;
+  h2{
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+}
+
+.l-pageCta__contents{
+  margin-top: 24px;
+}
+
+.l-pageCta__tel{
+  text-align: center;
+
+  span{
+    display: block;
+    font-size: 14px;
+  }
+}
+
+.l-pageCta__num{
+    display: inline-block;
+    font-size: 32px;
+    position: relative;
+    padding-left: 32px;
+    margin-left: -32px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url(../images/common/cta-tel.png) no-repeat center
+        center/contain;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+
+}
+
+.l-pageCta__button{
+  margin-top: 24px;
+
+  a{
+    border: 1px solid #fff;
+    min-width: 260px;
+    width: fit-content;
+    margin-inline: auto;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    height: 56px;
+    border-radius: 5px;
+    transition: .6s;
+
+    &:hover{
+      opacity: .8;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .l-pageCta{
+    padding: 64px 0;
+
+  }
+
+  .l-pageCta__wrapper{
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+        max-width: 880px;
+    margin: 0 auto;
+    contain: content; 
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 50%;
+      width: 1px;
+      background: #fff;
+      inset: 0;
+    margin: auto;
+    }
+  }
+
+  .l-pageCta__header{
+    text-align: left;
+
+    h2{
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+
+    p{
+      font-size: 18px;
+    }
+  }
+
+  .l-pageCta__contents{
+    margin-top: 0;
+    p{
+      font-size: 18px;
+    }
+  }
+
+  .l-pageCta__num{
+    padding-left: 36px;
+    margin-left: -36px;
+    &:before{
+      height: 28px;
+      width: 28px;
+    }
+  }
+
+  .l-pageCta__link{
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../setting/setting";
+
+.p-archive{
+  background: setting.$color-sub;
+  padding: 40px 0;
+
+}
+
+.p-archive__inner{
+  max-width: 1380px;
+  padding-right: 6%;
+  padding-left: 6%;
+  margin: 0 auto;
+}
+
+.p-archive__article{
+  background: #fff;
+  border-radius: 10px;
+}
+
+@media (min-width: 1024px){
+  .p-archive{
+    padding: 64px 0;
+  }
+  .p-archive__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .p-archive__article{
+    width: 72%;
+    padding: 12px 24px;
+  }
+}

@@ -1,0 +1,51 @@
+@use "../setting/setting";
+
+@mixin top-heading-span{
+  color: setting.$color-main;
+  font-family: setting.$font-english;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  position: relative;
+
+  @media (min-width: 1024px){
+    font-size: 20px;
+  }
+}
+
+@mixin top-heading-h2{
+  font-size: 24px;
+
+  @media (min-width: 1024px){
+    font-size: 36px;
+  }
+}
+
+@mixin p-size{
+  font-size: 16px;
+
+  @media (min-width: 1024px){
+    font-size: 18px;
+  }
+}
+
+@mixin span-line{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 16px;
+  background: setting.$color-main;
+  top: -4px;
+  left: -12px;
+  transform: rotate(-44deg); 
+}
+
+@mixin pageHeading-line{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background: setting.$color-main;
+  top: -2px;
+  left: -16px;
+  transform: rotate(-44deg); 
+}

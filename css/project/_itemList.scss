@@ -1,0 +1,72 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-itemList__heading{
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 8px;
+
+   &::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: setting.$color-main;
+   }
+
+}
+
+.p-itemList__desc{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.p-itemList__item{
+  margin-top: 16px;
+}
+
+.p-itemList__item-title{
+  font-size: 16px;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 8px;
+  color: setting.$color-main;
+}
+
+.p-itemList__item-contents{
+  background: setting.$color-sub;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px){
+  .p-itemList__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 46px;
+    row-gap: 24px;
+  }
+
+
+  .p-itemList__item-contents{
+    padding: 16px;
+    min-height: 106px;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-itemList__heading{
+    font-size: 24px;
+  }
+
+  .p-itemList__item-title{
+    font-size: 18px;
+  }
+
+  .p-itemList__item-contents{
+    font-size: 16px;
+  }
+}

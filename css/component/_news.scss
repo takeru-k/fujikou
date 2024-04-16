@@ -1,0 +1,68 @@
+@use "../setting/setting";
+
+.c-news{
+  background: #fff;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 24px auto 0;
+  padding-bottom: 24px;
+}
+
+.c-news__list {
+  padding: 12px 24px;
+}
+
+.c-news__item {
+  padding: 24px 0 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #E6E6E6;
+
+  a{
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+
+.c-news__meta{
+  display: flex;
+  align-items: center;
+
+  time{
+    font-size: 14px;
+    color: #888888;
+  }
+
+  p{
+    color: #fff;
+    background: #F5A2CB;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 6em;
+    /* 親要素の文字サイズを基準 */
+    text-align: center;
+     margin-left: 20px;
+  }
+}
+
+.c-news__title{
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+@media (min-width: 1024px){
+  .c-news{
+    padding: 20px 40px 40px;
+    margin-top: 40px;
+  }
+
+  .c-news__meta{
+    time{
+      font-size: 16px;
+    }
+  }
+
+  .c-news__title{
+    font-size: 18px;
+  }
+}

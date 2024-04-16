@@ -1,0 +1,41 @@
+@use "../setting/setting";
+
+.p-mission{
+  border: 1px solid #dadada;
+  padding: 20px;
+  margin: 24px auto 0;
+  max-width: 800px;
+}
+
+.p-mission__item{
+  margin-bottom: 40px;
+}
+
+.p-mission__header{
+  span{
+    color: setting.$color-main;
+    font-family: setting.$font-english;
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+  }
+
+  p{
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.p-mission__desc{
+  margin-top: 16px;
+}
+
+@media (min-width: 768px){
+  .p-mission{
+    padding-top: 64px;
+  }
+  .p-mission__item{
+    text-align: center;
+    margin-bottom: 64px;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../setting/setting";
+.p-article{
+  padding: 40px 0 60px;
+  margin: 0 auto;
+  background: setting.$color-sub;
+}
+
+.p-article__inner{
+  max-width: 1380px;
+  padding-right: 4%;
+  padding-left: 4%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px){
+  .p-article__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+}

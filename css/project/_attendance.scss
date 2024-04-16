@@ -1,0 +1,120 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-attendance{
+  margin: 24px auto 0;
+  max-width: 880px;
+}
+
+.p-attendance__item-header{
+  display: none;
+}
+
+.p-attendance__item{
+  border-bottom: 1px solid #dadada;
+  padding: 16px 0;
+}
+
+.p-attendance__meta{
+  display: flex;
+  font-size: 14px;
+}
+
+.p-attendance__num{
+  margin-left: 16px;
+}
+
+.p-attendance__title{
+  margin-top: 8px;
+  @include mixin.p-size;
+}
+
+.p-attendance__executor{
+  margin-top: 8px;
+  @include mixin.p-size;
+}
+
+.p-attendance__button{
+  margin-top: 24px;
+}
+
+/*================================
+	Tab以上
+=================================*/
+@media (min-width: 768px){
+  .p-attendance__desc{
+    display: flex;
+    gap: 24px;
+  }
+}
+
+/*================================
+	PC
+=================================*/
+
+@media (min-width: 1024px){
+  .p-attendance{
+    margin-top: 40px;
+  }
+
+  .p-attendance__item{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .p-attendance__item-header{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 24px;
+    color: setting.$color-main;
+    font-weight: bold;
+    border-bottom: 1px solid setting.$color-main;
+    padding-bottom: 8px;
+  }
+
+  .p-attendance__meta{
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .p-attendance__date{
+    width: 140px;
+  }
+
+  .p-attendance__num{
+    width: 40px;
+  }
+
+  .p-attendance__title{
+    width: 300px;
+  }
+
+  .p-attendance__executor{
+    width: 340px;
+  }
+
+
+  .p-attendance__button{
+    margin-top: 40px;
+  }
+}
+
+.p-attendance__item {
+  display: none; /* 最初は全てのアイテムを非表示にする */
+  opacity: 0; /* 透明度を0に設定することで非表示にする */
+  transition: opacity 2s ease; /* opacityプロパティの変化を0.3秒かけて行う */
+}
+
+.p-attendance__item.visible {
+  display: block; /* .visible クラスが付与されたアイテムだけを表示する */
+  opacity: 1; /* 透明度を1に設定して表示する */
+
+  @media (min-width: 1024px){
+    display: flex;
+  }
+}
+
+

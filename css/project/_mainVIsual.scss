@@ -1,0 +1,177 @@
+@use "../setting/setting";
+
+
+.p-mainVisual{
+  position: relative;
+  background: url(../images/top/mainVisual.png)right top 24px no-repeat;
+  background-size: 80% auto;
+  height: 80vh;
+  overflow: hidden;
+
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 352px;
+    height: 365px;
+    background: url(../images/top/mv-circle.png) no-repeat center
+      center/cover;
+    right: -20px;
+    top: -60px;
+    z-index: -1;
+    animation: zoom 4s 1;
+   animation-fill-mode: forwards;
+  }
+}
+
+@keyframes zoom {
+   0% {
+      transform: scale(0.8);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+
+
+.p-mainVisual__contents{
+  padding: 40vh 0 40px;
+}
+
+.p-mainVisual__heading{
+  font-size: 32px;
+}
+
+.p-mainVisual__text{
+  margin-top: 24px;
+}
+
+.p-mainVisual__button{
+  position: relative;
+  margin: 32px auto 0;
+}
+
+
+/*================================
+	tab
+=================================*/
+@media (min-width: 768px){
+  .p-mainVisual{
+    max-height: 480px;
+    padding: 4vh 0 ;
+    background-size: 50% auto;
+    background-position: right top;
+
+    &::before {
+      width: 700px;
+      height: 728px;
+      right: -10px;
+      top: -200px;
+    }
+  }
+
+  .p-mainVisual__contents{
+    padding-top: 40px;
+  }
+
+  .p-mainVisual__heading{
+    font-size: 48px;
+  }
+
+  .p-mainVisual__text{
+    font-size: 18px;
+  }
+}
+
+
+/*================================
+	PC
+=================================*/
+
+@media (min-width: 1024px){
+  .p-mainVisual{
+    padding: 4vh 0;
+    max-height: 680px;
+    overflow: visible;
+  }
+
+  .p-mainVisual__contents{
+    margin-left: 32px;
+  }
+
+  .p-mainVisual__heading{
+    font-size: 60px;
+  }
+
+  .p-mainVisual__text{
+    margin-top: 32px;
+  }
+
+  .p-mainVisual__button{
+    margin-top: 48px;
+  }
+}
+
+
+
+
+/*========= 流れるテキスト ===============*/
+
+/*全共通*/
+
+.slide-in {
+  overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+
+}
+
+/*左右のアニメーション*/
+.leftAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+  animation-name:slideTextX100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+  transform: translateX(-100%); /*要素を左の枠外に移動*/
+        opacity: 0;
+  }
+
+  to {
+  transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+  animation-name:slideTextX-100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+  from {
+  transform: translateX(100%);/*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+  transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+

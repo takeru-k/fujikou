@@ -1,0 +1,48 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-vehicle{
+  margin-top: 24px;
+}
+
+.p-vehicle__items{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.p-vehicle__item{
+  width: calc(50% - 8px);
+}
+.p-vehicle__image{
+  aspect-ratio: 3 / 2;
+}
+
+.p-vehicle__name{
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.p-vehicle__spec{
+  font-size: 14px;
+}
+
+@media (min-width: 768px){
+  .p-vehicle__item{
+    width: calc(32% - 8px);
+  }
+}
+
+@media (min-width: 1024px){
+  .p-vehicle__items{
+    gap: 24px 16px;
+  }
+
+  .p-vehicle__item{
+    width: calc(24% - 8px);
+  }
+
+  .p-vehicle__name{
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,102 @@
+@use "../setting/setting";
+
+
+.c-works__header{
+  padding-top: 4px;
+
+  span{
+    font-size: 12px;
+    color: setting.$color-main;
+    border: 1px solid setting.$color-main;
+    padding: 1px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+
+}
+
+.c-works__content{
+  margin: 32px 0 24px;
+  position: relative;
+}
+
+.c-works__item{
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dadada;;
+}
+
+
+
+/*================================
+	Swiper
+=================================*/
+
+
+
+.swiper-slide{
+  margin-right: 20px;
+}
+
+.swiper-pagination-bullets {
+    display: none;
+}
+
+.swiper{
+  position: relative;
+  z-index: 1;
+}
+
+/* 幅・高さを指定 */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 50px;
+  width: 50px;
+  
+  &:hover{
+    opacity: .6;
+  }
+}
+ 
+/* 矢印を消す、画像に変更 */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+
+}
+ 
+/* 前に戻る画像パス */
+.swiper-button-prev:after {
+  background-image: url(../images/common/arrow-next.png);
+  transform: scale(-1, 1);
+}
+/* 次に進む画像パス */
+.swiper-button-next:after {
+  background-image: url(../images/common/arrow-next.png);
+
+}
+
+.swiper-btn{
+  display: none;
+
+  @media (min-width: 768px){
+    display: flex;
+    position: absolute;
+    top: -60px;;
+    left: 86%;
+    width: 160px;
+    z-index: 2;
+  }
+
+  @media (min-width: 1024px){
+    top: -60px;
+  }
+  
+}
+

@@ -1,0 +1,56 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.l-pageHeader{
+  padding: 40px 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.l-pageHeader__heading{
+
+  h1{
+    font-size: 32px;
+  }
+
+  span{
+    display: inline;
+    text-transform: uppercase;
+    font-family: setting.$font-english;
+    font-size: 14px;
+    color: setting.$color-main;
+  }
+}
+
+.l-pageHeader__contents{
+  margin-top: 16px;
+
+  p{
+    @include mixin.p-size;
+  }
+}
+
+.l-pageHeader__button{
+  margin-top: 24px;
+}
+
+@media (min-width: 768px){
+  .l-pageHeader__heading{
+    display: flex;
+    align-items: baseline;
+
+    span{
+      margin-left: 16px;
+    }
+  }
+
+  .l-pageHeader__contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .l-pageHeader__button{
+    margin-top: 0;
+  }
+}

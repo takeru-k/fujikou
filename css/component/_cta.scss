@@ -1,0 +1,144 @@
+@use "../setting/setting";
+
+.c-cta{
+  padding: 40px 0;
+}
+
+.c-cta__item{
+  padding: 24px 32px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.c-cta__recruit{
+  background: #23BBCC;
+}
+
+.c-cta__contact{
+  background: setting.$gradient;
+}
+
+.c-cta__heading{
+  span{
+    font-family: setting.$font-english;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    position: relative;
+    font-size: 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 16px;
+      background: #fff;
+      top: -4px;
+      left: -12px;
+      transform: rotate(-44deg); 
+    }
+  }
+
+  h2{
+    font-size: 20px;
+  }
+}
+
+.c-cta__texts{
+  margin-top: 16px;
+}
+
+
+.c-cta__button{
+  margin-top: 24px;
+  a{
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+    display: block;
+    transition: .4s;
+    position: relative;
+    font-size: 14px;
+    padding-right: 32px;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 7px;
+      right: 0;
+      background: url('../images/top/arrow-cta.svg') no-repeat;
+      background-size: contain;   
+      height: 20px;
+      width: 20px;
+      transition: .4s;
+    }
+
+    &:hover{
+      opacity: .8;
+      text-decoration: underline;
+    }
+
+    &:hover:after{
+      right: -1rem;
+            height: 28px;
+      width: 28px;
+    }
+
+  }
+}
+
+@media (min-width: 768px){
+  .c-cta{
+    padding: 64px 0;
+  }
+  .c-cta__wrapper{
+    display: flex;
+    gap: 20px;
+  }
+
+  .c-cta__button{
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-cta{
+    padding: 64px 0;
+  }
+  .c-cta__wrapper{
+    gap: 60px;
+  }
+
+  .c-cta__item{
+    padding: 40px 48px;
+  }
+
+  .c-cta__heading{
+    span{
+      font-size: 18px;
+    }
+
+    h2{
+      font-size: 24px;
+    }
+  }
+
+  .c-cta__texts{
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  .c-cta__button{
+    a{
+      font-size: 16px;
+      padding-right: 40px;
+
+      &::after {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+}
+

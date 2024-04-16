@@ -1,0 +1,69 @@
+@use "../setting/setting";
+
+
+@media not all and (min-width: 1023px){
+  .p-faq__logo{
+    display: none;
+  }
+}
+
+.p-faq{
+  max-width: 680px;
+  margin: 24px auto 0;
+}
+
+.p-faq__item{
+  background: #f8f8f8;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.p-faq__q{
+  font-size: 16px;
+}
+
+.p-faq__a{
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+@media (min-width: 1024px){
+  .p-faq{
+    margin-top: 40px;
+  }
+  
+  .p-faq__item{
+    display: flex;
+    align-items: center;
+    height: auto;
+
+    margin: 0px 0px 12px 0px;
+    padding: 40px 52px 40px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .p-faq__logo{
+    color: setting.$color-main;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin: 0px 36px 0px 0px;
+    text-align: left;
+    max-width: calc(100% - 52px);
+    justify-content: flex-start;
+  }
+
+  .p-faq__q{
+    font-size: 18px;
+  }
+
+  .p-faq__a{
+    font-size: 16px;
+  }
+
+  .p-faq__item{
+    margin-bottom: 40px;
+  }
+}

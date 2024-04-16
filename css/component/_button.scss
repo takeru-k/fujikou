@@ -1,0 +1,77 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.c-button{
+  background-image: setting.$gradient;
+  box-shadow: setting.$shadow;
+  height: 56px;
+  position: relative;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  min-width: 260px;
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: 32px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.8s ease;
+
+  &:hover{
+    opacity: .6;
+    transform: scale(1.1);
+    text-decoration: underline;
+  }
+
+}
+
+@media (min-width: 768px){
+  .c-button{
+    margin-inline: 0;
+  }
+}
+
+.c-button__more{
+  position: relative;
+  text-align: center;
+  margin: auto;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.8s ease;
+  display: block;
+  padding-right: 48px;
+  @include mixin.p-size;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 48%;
+      right: 0;
+      transform: translateY(-52%);
+      background: url('../images/common/arrow-down.png') no-repeat center center/contain;
+      height: 32px;
+      width: 32px;
+      transition: 0.4s;
+    }
+
+    &:hover{
+      opacity: .6;
+      text-decoration: underline;
+    }
+}
+
+
+.c-button__center{
+  margin-top: 24px;
+}
+
+@media (min-width: 1024px){
+  .c-button__center{
+    .c-button{
+      margin: 40px auto 0;
+    }
+  }
+}

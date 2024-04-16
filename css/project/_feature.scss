@@ -1,0 +1,87 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-feature__item{
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.p-feature__wrapper{
+  counter-reset: number 0; 
+}
+
+.p-feature__image{
+
+
+  img{
+    aspect-ratio: 3 / 2;
+    border-radius: 10px;
+  }
+}
+
+.p-feature__num{
+    color: setting.$color-main;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+
+    span{
+            color: setting.$color-main;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 4px;
+    }
+}
+
+.p-feature__texts{
+  margin-top: 16px;
+
+
+  h3{
+    font-size: 18px;
+
+  }
+}
+
+.p-feature__text{
+  p{
+    margin-top: 8px;
+    @include mixin.p-size;
+  }
+}
+
+@media (min-width: 768px){
+  .p-feature__item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 46px;
+    row-gap: 24px;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-feature{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 20px;
+  }
+
+  .p-feature__item{
+    margin-top: 0;
+    margin-bottom: 64px;
+    align-items: center;
+  }
+
+  .p-feature__item:last-child{
+    margin-bottom: 0;
+  }
+
+  .p-feature__texts{
+    margin-top: 0;
+    
+    h3{
+      font-size: 24px;
+    }
+  }
+}

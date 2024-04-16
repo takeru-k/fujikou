@@ -1,0 +1,57 @@
+@use "../setting/setting";
+
+.c-intro{
+  max-width: 880px;
+  margin:0 auto;
+  padding-top: 40px;
+}
+
+.c-intro__heading{
+  font-size: 24px;
+
+  span{
+    color: setting.$color-main;
+  }
+}
+
+.c-intro__texts{
+  margin-top: 20px;
+
+  p{
+    margin-top: 16px;
+  }
+
+  @media not all and (min-width: 767px){
+    br{
+      display: none;
+    }
+  }
+}
+
+
+
+@media (min-width: 768px){
+  .c-intro__heading{
+      text-align: center;
+  }
+
+  .c-intro__texts{
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-intro{
+    padding-top: 64px;
+  }
+
+  .c-intro__heading{
+    font-size: 32px;
+  }
+
+  .c-intro__texts{
+    margin-top: 28px;
+    font-size: 18px;
+  }
+
+}
