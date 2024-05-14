@@ -1,45 +1,44 @@
 @use "../setting/setting";
 @use "../setting/mixin";
 
-.c-section{
+.c-section {
   padding: 40px 0;
 }
 
-.c-section__xl{
+.c-section__xl {
   padding: 40px 0;
 }
 
-  .c-section + .c-section{
-    padding-top: 0;
-  }
+.c-section + .c-section {
+  padding-top: 0;
+}
 
-
-.c-section__heading{
+.c-section__heading {
   text-align: center;
 
-  span{
+  span {
     @include mixin.top-heading-span;
-    
+
     &::before {
       @include mixin.span-line;
     }
   }
 
-  h2{
+  h2 {
     @include mixin.top-heading-h2;
   }
 }
 
-@media (min-width: 1024px){
-  .c-section{
+@media (min-width: 1024px) {
+  .c-section {
     padding: 64px 0;
   }
 
-  .c-section + .c-section{
+  .c-section + .c-section {
     padding-top: 40px;
   }
 
-  .c-section__xl{
+  .c-section__xl {
     padding: 88px 0;
   }
 }
