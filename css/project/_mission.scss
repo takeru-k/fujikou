@@ -1,41 +1,79 @@
 @use "../setting/setting";
 
-.p-mission{
+.p-mission {
   border: 1px solid #dadada;
-  padding: 20px;
+  padding: 24px;
   margin: 24px auto 0;
   max-width: 800px;
 }
 
-.p-mission__item{
+.p-mission__item {
   margin-bottom: 40px;
 }
 
-.p-mission__header{
-  span{
+.p-mission__header {
+  span {
     color: setting.$color-main;
     font-family: setting.$font-english;
     text-transform: capitalize;
-    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
     display: block;
-  }
-
-  p{
+    font-size: 18px;
     font-weight: bold;
-    font-size: 20px;
+    padding-bottom: 4px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
+  ul {
+    margin-top: 12px;
+    text-align: left;
+    display: inline-block;
+  }
+
+  li {
+    padding-left: 1em;
+    text-indent: -0.8em;
+    margin-bottom: 16px;
+    font-size: 18px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #333;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 0.5em;
+      margin-top: -4px;
+    }
   }
 }
 
-.p-mission__desc{
-  margin-top: 16px;
-}
-
-@media (min-width: 768px){
-  .p-mission{
-    padding-top: 64px;
+@media (min-width: 768px) {
+  .p-mission {
+    padding: 64px 64px 0;
   }
-  .p-mission__item{
-    text-align: center;
+  .p-mission__item {
     margin-bottom: 64px;
+  }
+
+  .p-mission__header {
+    span {
+      padding-bottom: 16px;
+      font-size: 20px;
+    }
+
+    p {
+      margin-top: 24px;
+    }
+
+    ul {
+      margin-top: 24px;
+    }
   }
 }

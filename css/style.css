@@ -1233,7 +1233,7 @@ li {
 }
 .c-post__main p {
   margin-top: 20px;
-      line-height: 1.85;
+  line-height: 1.85;
 }
 .c-post__main img {
   margin-top: 32px;
@@ -2202,7 +2202,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 .p-mission {
   border: 1px solid #dadada;
-  padding: 20px;
+  padding: 24px;
   margin: 24px auto 0;
   max-width: 800px;
 }
@@ -2215,25 +2215,55 @@ div.wpcf7 .wpcf7-spinner {
   color: #2266CC;
   font-family: "Josefin Sans", sans-serif;
   text-transform: capitalize;
-  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
   display: block;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 4px;
 }
 .p-mission__header p {
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  margin-top: 12px;
 }
-
-.p-mission__desc {
-  margin-top: 16px;
+.p-mission__header ul {
+  margin-top: 12px;
+  text-align: left;
+  display: inline-block;
+}
+.p-mission__header li {
+  padding-left: 1em;
+  text-indent: -0.8em;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+.p-mission__header li:before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #333;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  margin-top: -4px;
 }
 
 @media (min-width: 768px) {
   .p-mission {
-    padding-top: 64px;
+    padding: 64px 64px 0;
   }
   .p-mission__item {
-    text-align: center;
     margin-bottom: 64px;
+  }
+  .p-mission__header span {
+    padding-bottom: 16px;
+    font-size: 20px;
+  }
+  .p-mission__header p {
+    margin-top: 24px;
+  }
+  .p-mission__header ul {
+    margin-top: 24px;
   }
 }
 .p-vehicle {
