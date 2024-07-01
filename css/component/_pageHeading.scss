@@ -1,39 +1,36 @@
 @use "../setting/setting";
 @use "../setting/mixin";
 
-.c-pageHeading{
+.c-pageHeading {
   z-index: 1;
-  
-  h2{
+
+  h2 {
     font-size: 24px;
     text-align: center;
   }
 
-  span{
+  span {
     color: setting.$color-main;
   }
 }
 
-
-.c-pageHeading__text{
+.c-pageHeading__text {
   margin-top: 8px;
   @include mixin.p-size;
 }
 
-@media (min-width: 1024px){
-  .c-pageHeading{
-    h2{
+@media (min-width: 1024px) {
+  .c-pageHeading {
+    h2 {
       font-size: 32px;
     }
   }
 }
 
-@media (min-width: 1024px){
-  
-  .c-pageHeading__left{
-    h2{
+@media (min-width: 1024px) {
+  .c-pageHeading__left {
+    h2 {
       text-align: left;
     }
-    
   }
 }

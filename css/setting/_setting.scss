@@ -3,10 +3,18 @@
 =================================*/
 
 $breakpoints: (
-  'sm': (min-width: 640px),
-  'md': (min-width: 768px),
-  'lg': (min-width: 1024px),
-  'xl': (min-width: 1280px)
+  "sm": (
+    min-width: 640px,
+  ),
+  "md": (
+    min-width: 768px,
+  ),
+  "lg": (
+    min-width: 1024px,
+  ),
+  "xl": (
+    min-width: 1280px,
+  ),
 ) !default;
 
 @mixin mq($breakpoint: sm) {
@@ -36,42 +44,43 @@ $breakpoints: (
 /*================================
 	色設定
 =================================*/
-$color-main: #2266CC;
-$color-sub: #F5F5F5;
-$color-accent: #23BBCC;
+$color-main: #2266cc;
+$color-sub: #f5f5f5;
+$color-accent: #23bbcc;
 $color-link: #337ab7;
 
-$gradient: linear-gradient(138deg, #0093E9 0%, #87E1E1 100%);
+$gradient: linear-gradient(138deg, #0093e9 0%, #87e1e1 100%);
 
-$shadow: 0 2px 20px 0 rgba(0, 160, 239, 0.50);
+$shadow: 0 2px 20px 0 rgba(0, 160, 239, 0.5);
 
 $font-english: "Josefin Sans", sans-serif;
 
 /*================================
 	全体共通
 =================================*/
-body{
-  font-family:  "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK JP Subset", "Yu Gothic Medium", "游ゴシック Medium", "Yu Gothic", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
+body {
+  font-family: "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK JP Subset",
+    "Yu Gothic Medium", "游ゴシック Medium", "Yu Gothic", "游ゴシック", YuGothic,
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
   font-weight: 500;
   color: #242422;
   line-height: 1.75;
 }
 
-h1{
+h1 {
   line-height: 1.5;
 }
 
-h2{
+h2 {
   line-height: 1.5;
 }
 
-a{
+a {
   color: inherit;
-  cursor:pointer;
+  cursor: pointer;
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
-

@@ -195,7 +195,7 @@ li {
     transform: translateY(-50%);
   }
   .l-header__menu a:hover {
-    color: #2266CC;
+    color: #2266cc;
   }
   .l-header__nav.open {
     position: absolute;
@@ -247,7 +247,7 @@ li {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
   }
   .l-header__menu li:hover {
-    color: #2266CC;
+    color: #2266cc;
   }
 }
 @media (min-width: 1280px) {
@@ -256,7 +256,7 @@ li {
   }
 }
 .current-menu-item {
-  color: #2266CC;
+  color: #2266cc;
 }
 
 .l-inner {
@@ -372,7 +372,7 @@ li {
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
   font-size: 14px;
-  color: #2266CC;
+  color: #2266cc;
 }
 
 .l-pageHeader__contents {
@@ -568,7 +568,7 @@ li {
   position: relative;
   width: 24px;
   height: 1px;
-  background-color: #2266CC;
+  background-color: #2266cc;
   transition: 0.2s;
   margin: 0 auto;
 }
@@ -579,7 +579,7 @@ li {
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #2266CC;
+  background-color: #2266cc;
   transition: 0.5s;
   left: 0;
 }
@@ -599,7 +599,7 @@ li {
 
 .c-hamburger__line.open::before, .c-hamburger__line.open::after {
   content: "";
-  background-color: #2266CC;
+  background-color: #2266cc;
   transition: 0.2s;
 }
 
@@ -617,7 +617,7 @@ li {
   }
 }
 .c-button {
-  background-image: linear-gradient(138deg, #0093E9 0%, #87E1E1 100%);
+  background-image: linear-gradient(138deg, #0093e9 0%, #87e1e1 100%);
   box-shadow: 0 2px 20px 0 rgba(0, 160, 239, 0.5);
   height: 56px;
   position: relative;
@@ -628,7 +628,7 @@ li {
   width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
-  border-radius: 32px;
+  border-radius: calc(infinity * 1px);
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 16px;
@@ -704,7 +704,7 @@ li {
 }
 
 .c-cta__contact {
-  background: linear-gradient(138deg, #0093E9 0%, #87E1E1 100%);
+  background: linear-gradient(138deg, #0093e9 0%, #87e1e1 100%);
 }
 
 .c-cta__heading span {
@@ -815,15 +815,11 @@ li {
   padding: 40px 0;
 }
 
-.c-section + .c-section {
-  padding-top: 0;
-}
-
 .c-section__heading {
   text-align: center;
 }
 .c-section__heading span {
-  color: #2266CC;
+  color: #2266cc;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -839,7 +835,7 @@ li {
   position: absolute;
   height: 1px;
   width: 16px;
-  background: #2266CC;
+  background: #2266cc;
   top: -4px;
   left: -12px;
   transform: rotate(-44deg);
@@ -876,7 +872,7 @@ li {
 }
 .c-table table th {
   text-align: left;
-  color: #2266CC;
+  color: #2266cc;
   font-size: 16px;
 }
 @media (min-width: 1024px) {
@@ -963,7 +959,7 @@ li {
   font-size: 24px;
 }
 .c-intro__heading span {
-  color: #2266CC;
+  color: #2266cc;
 }
 
 .c-intro__texts {
@@ -1006,7 +1002,7 @@ li {
   text-align: center;
 }
 .c-pageHeading span {
-  color: #2266CC;
+  color: #2266cc;
 }
 
 .c-pageHeading__text {
@@ -1034,8 +1030,8 @@ li {
 }
 .c-works__header span {
   font-size: 12px;
-  color: #2266CC;
-  border: 1px solid #2266CC;
+  color: #2266cc;
+  border: 1px solid #2266cc;
   padding: 1px 8px;
   border-radius: 4px;
   display: inline-block;
@@ -1331,7 +1327,7 @@ li {
   width: 100%;
   height: 48px;
   border-radius: 40px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   border: none;
   padding: 0 10px 0 50px;
   margin-bottom: 16px;
@@ -1692,8 +1688,8 @@ caption, th {
   padding: 12px;
   width: 100%;
   max-width: 400px;
-  border: 2px solid #2266CC;
-  background: #2266CC;
+  border: 2px solid #2266cc;
+  background: #2266cc;
   color: #fff;
   text-decoration: none;
   text-align: center;
@@ -1722,7 +1718,7 @@ div.wpcf7 .wpcf7-spinner {
   max-width: 800px;
 }
 .p-error__contents h2 {
-  color: #2266CC;
+  color: #2266cc;
   margin-bottom: 12px;
   font-size: 18px;
 }
@@ -1901,7 +1897,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 .p-topAbout__heading span {
-  color: #2266CC;
+  color: #2266cc;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -1917,7 +1913,7 @@ div.wpcf7 .wpcf7-spinner {
   position: absolute;
   height: 1px;
   width: 16px;
-  background: #2266CC;
+  background: #2266cc;
   top: -4px;
   left: -12px;
   transform: rotate(-44deg);
@@ -1973,7 +1969,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 .p-topAbout__list span {
   font-size: 14px;
-  color: #2266CC;
+  color: #2266cc;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 1px;
   font-weight: normal;
@@ -2041,7 +2037,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 .p-topService::before {
   content: "";
-  background-image: linear-gradient(#fff 0%, #F4FBFE 50%, #fff 100%);
+  background-image: linear-gradient(#fff 0%, #f4fbfe 50%, #fff 100%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2052,7 +2048,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 .p-topService__heading span {
-  color: #2266CC;
+  color: #2266cc;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -2068,7 +2064,7 @@ div.wpcf7 .wpcf7-spinner {
   position: absolute;
   height: 1px;
   width: 16px;
-  background: #2266CC;
+  background: #2266cc;
   top: -4px;
   left: -12px;
   transform: rotate(-44deg);
@@ -2105,7 +2101,7 @@ div.wpcf7 .wpcf7-spinner {
   z-index: 2;
 }
 .p-topService__contents span {
-  color: #2266CC;
+  color: #2266cc;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -2188,9 +2184,6 @@ div.wpcf7 .wpcf7-spinner {
   .p-topService__contents h3 {
     font-size: 24px;
   }
-  .p-topService__contents p {
-    margin-top: 20px;
-  }
   .p-topService__link {
     margin-top: 24px;
   }
@@ -2212,7 +2205,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 .p-mission__header span {
-  color: #2266CC;
+  color: #2266cc;
   font-family: "Josefin Sans", sans-serif;
   text-transform: capitalize;
   border-bottom: 1px solid #e6e6e6;
@@ -2384,9 +2377,9 @@ div.wpcf7 .wpcf7-spinner {
     flex-direction: row-reverse;
     justify-content: flex-start;
     gap: 24px;
-    color: #2266CC;
+    color: #2266cc;
     font-weight: bold;
-    border-bottom: 1px solid #2266CC;
+    border-bottom: 1px solid #2266cc;
     padding-bottom: 8px;
   }
   .p-attendance__meta {
@@ -2437,7 +2430,7 @@ div.wpcf7 .wpcf7-spinner {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: #2266CC;
+  background: #2266cc;
 }
 
 .p-itemList__desc {
@@ -2453,11 +2446,11 @@ div.wpcf7 .wpcf7-spinner {
   font-size: 16px;
   border-bottom: 1px solid #dadada;
   padding-bottom: 8px;
-  color: #2266CC;
+  color: #2266cc;
 }
 
 .p-itemList__item-contents {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 8px;
   border-radius: 10px;
   font-size: 14px;
@@ -2503,17 +2496,26 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 .p-feature__num {
-  color: #2266CC;
+  color: #2266cc;
   font-weight: bold;
   font-size: 14px;
   position: relative;
   z-index: 1;
 }
 .p-feature__num span {
-  color: #2266CC;
+  color: #2266cc;
   font-weight: bold;
   font-size: 20px;
   margin-left: 4px;
+}
+.p-feature__num::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 1px;
+  background: #2266cc;
+  left: 0;
+  bottom: 0;
 }
 
 .p-feature__texts {
@@ -2521,11 +2523,13 @@ div.wpcf7 .wpcf7-spinner {
 }
 .p-feature__texts h3 {
   font-size: 18px;
+  padding-top: 8px;
 }
 
 .p-feature__text p {
   margin-top: 8px;
   font-size: 16px;
+  text-align: justify;
 }
 @media (min-width: 1024px) {
   .p-feature__text p {
@@ -2673,7 +2677,7 @@ div.wpcf7 .wpcf7-spinner {
     max-width: 100%;
   }
   .p-faq__logo {
-    color: #2266CC;
+    color: #2266cc;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -2713,7 +2717,7 @@ div.wpcf7 .wpcf7-spinner {
   content: counter(number);
   font-size: 18px;
   color: #fff;
-  background: #2266CC;
+  background: #2266cc;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -2768,7 +2772,7 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 .p-csr__action {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 16px;
   border-radius: 10px;
   margin-top: 16px;
@@ -2818,7 +2822,7 @@ div.wpcf7 .wpcf7-spinner {
 .p-article {
   padding: 40px 0 60px;
   margin: 0 auto;
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 .p-article__inner {
@@ -2835,7 +2839,7 @@ div.wpcf7 .wpcf7-spinner {
   }
 }
 .p-archive {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 40px 0;
 }
 
@@ -2865,14 +2869,14 @@ div.wpcf7 .wpcf7-spinner {
   }
 }
 .p-recruit__item {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 20px 16px;
   margin: 24px auto 0;
   max-width: 800px;
   border-radius: 10px;
 }
 .p-recruit__item h3 {
-  color: #2266CC;
+  color: #2266cc;
   margin-bottom: 12px;
 }
 
