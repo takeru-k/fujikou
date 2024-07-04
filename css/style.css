@@ -1818,6 +1818,7 @@ div.wpcf7 .wpcf7-spinner {
     overflow: visible;
   }
   .p-mainVisual__contents {
+    padding-top: 64px;
     margin-left: 32px;
   }
   .p-mainVisual__heading {
