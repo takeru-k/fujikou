@@ -90,4 +90,3 @@ const mySwiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
-

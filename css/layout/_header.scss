@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.l-header__inner{
+.l-header__inner {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -20,18 +20,17 @@
     position: relative;
   }
 
-  img{
+  img {
     width: 140px;
   }
 }
 
-.l-header__menu{
-  li{
+.l-header__menu {
+  li {
     text-transform: uppercase;
     font-weight: bold;
   }
 }
-
 
 @media not all and (min-width: 1024px) {
   /* メニューのスタイリング */
@@ -39,7 +38,6 @@
     padding: 8px 16px;
     margin: 0 auto;
   }
-
 
   .l-header__nav {
     position: fixed;
@@ -99,12 +97,12 @@
 }
 
 /* 1024px以上のスタイリング */
-@media (min-width: 1024px){
-  .l-header{
+@media (min-width: 1024px) {
+  .l-header {
     height: 80px;
   }
 
-  .l-header__inner{
+  .l-header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,10 +110,10 @@
     padding-left: 4%;
   }
 
-  .l-header__logo{
+  .l-header__logo {
     width: 160px;
 
-    img{
+    img {
       width: 100%;
     }
   }
@@ -142,18 +140,18 @@
       color: #333;
       padding: 16px;
       border-bottom: none;
-      text-shadow: 0 0 20px rgba(255,255,255,.8);
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 
-      &:hover{
+      &:hover {
         color: setting.$color-main;
       }
     }
   }
 }
 
-@media (min-width: 1280px){
-  .l-header__menu{
-    li{
+@media (min-width: 1280px) {
+  .l-header__menu {
+    li {
       font-size: 16px;
     }
   }
@@ -163,3 +161,49 @@
   color: setting.$color-main;
 }
 
+.l-header__nav ul li {
+  position: relative;
+}
+/*下の階層を持っているulの指定*/
+.l-header__menu-child ul {
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  left: 0;
+  top: 54px;
+  z-index: 4;
+  /*形状を指定*/
+  border: 1px solid #dadada;
+  background: #fff;
+  width: 180px;
+  /*はじめは非表示*/
+  visibility: hidden;
+  opacity: 0;
+  /*アニメーション設定*/
+  transition: all 0.3s;
+}
+
+.l-header__menu-child li {
+  border-bottom: 1px solid #dadada;
+}
+
+/*hoverしたら表示*/
+.l-header__menu-child:hover > ul,
+.l-header__menu-child ul li:hover > ul,
+.l-header__menu-child:active > ul,
+.l-header__menu-child ul li:active > ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .l-header__menu-child ul {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: visible; /*JSで制御するため一旦表示*/
+    opacity: 1; /*JSで制御するため一旦表示*/
+    display: none; /*JSのslidetoggleで表示させるため非表示に*/
+    transition: none; /*JSで制御するためCSSのアニメーションを切る*/
+  }
+}

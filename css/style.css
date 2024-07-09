@@ -259,6 +259,53 @@ li {
   color: #2266cc;
 }
 
+.l-header__nav ul li {
+  position: relative;
+}
+
+/*下の階層を持っているulの指定*/
+.l-header__menu-child ul {
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  left: 0;
+  top: 54px;
+  z-index: 4;
+  /*形状を指定*/
+  border: 1px solid #dadada;
+  background: #fff;
+  width: 180px;
+  /*はじめは非表示*/
+  visibility: hidden;
+  opacity: 0;
+  /*アニメーション設定*/
+  transition: all 0.3s;
+}
+
+.l-header__menu-child li {
+  border-bottom: 1px solid #dadada;
+}
+
+/*hoverしたら表示*/
+.l-header__menu-child:hover > ul,
+.l-header__menu-child ul li:hover > ul,
+.l-header__menu-child:active > ul,
+.l-header__menu-child ul li:active > ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .l-header__menu-child ul {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: visible; /*JSで制御するため一旦表示*/
+    opacity: 1; /*JSで制御するため一旦表示*/
+    display: none; /*JSのslidetoggleで表示させるため非表示に*/
+    transition: none; /*JSで制御するためCSSのアニメーションを切る*/
+  }
+}
 .l-inner {
   max-width: 1200px;
   padding-right: 6%;
@@ -274,7 +321,7 @@ li {
 }
 
 .l-footer {
-  background: #31373B;
+  background: #31373b;
   padding: 40px 0 12px;
   color: #fff;
 }
@@ -298,7 +345,6 @@ li {
 }
 .l-footer__info li {
   margin-top: 8px;
-  font-size: 12px;
 }
 
 .l-footer__menu {
@@ -308,9 +354,24 @@ li {
   margin-top: 16px;
 }
 .l-footer__menu li {
-  font-size: 14px;
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.l-footer__menu-child li {
+  font-size: 14px;
+  padding-left: 16px;
+  position: relative;
+}
+.l-footer__menu-child li::before {
+  content: "-";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
 }
 
 .l-footer__copy {
@@ -331,29 +392,37 @@ li {
   }
   .l-footer__contents {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 88px;
   }
   .l-footer__info {
-    width: 44%;
+    width: 36%;
   }
   .l-footer__menu {
-    width: 56%;
+    width: 64%;
     margin-top: 0;
   }
   .l-footer__menu ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: start;
     margin-top: 0;
   }
   .l-footer__menu li {
-    width: 160px;
-    margin-bottom: 32px;
+    width: 190px;
+    margin-bottom: 40px;
   }
   .l-footer__list {
     margin-top: 0;
   }
   .l-footer__logo {
     width: 200px;
+  }
+  .l-footer__menu-child ul {
+    padding-top: 16px;
+  }
+  .l-footer__menu-child li {
+    margin-bottom: 24px;
   }
   .l-footer__copy {
     text-align: left;
