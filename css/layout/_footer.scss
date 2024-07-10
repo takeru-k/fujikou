@@ -22,6 +22,7 @@
 .l-footer__info {
   ul {
     margin-top: 16px;
+    margin-bottom: 40px;
   }
 
   li {
@@ -47,6 +48,7 @@
     font-size: 14px;
     padding-left: 16px;
     position: relative;
+    color: #ccc;
 
     &::before {
       content: "-";
@@ -96,7 +98,6 @@
     ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: start;
       margin-top: 0;
     }
 

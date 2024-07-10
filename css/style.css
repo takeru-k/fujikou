@@ -342,6 +342,7 @@ li {
 
 .l-footer__info ul {
   margin-top: 16px;
+  margin-bottom: 40px;
 }
 .l-footer__info li {
   margin-top: 8px;
@@ -362,6 +363,7 @@ li {
   font-size: 14px;
   padding-left: 16px;
   position: relative;
+  color: #ccc;
 }
 .l-footer__menu-child li::before {
   content: "-";
@@ -405,7 +407,6 @@ li {
   .l-footer__menu ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
     margin-top: 0;
   }
   .l-footer__menu li {
@@ -2346,6 +2347,8 @@ div.wpcf7 .wpcf7-spinner {
 
 .p-vehicle__image {
   aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-vehicle__name {
